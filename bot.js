@@ -35,7 +35,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
           [
             {
               text: "✨ Explore",
-              url: "https://ai-power-ups.web.app/"
+              url: "https://jokergamingai.com/"
             },
             {
               text: "🤖 AI Features",
