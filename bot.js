@@ -1,17 +1,7 @@
-const TelegramBot = require('node-telegram-bot-api');
-
-const token = process.env.TELEGRAM_TOKEN;
-
-if (!token) {
-  throw new Error('Missing TELEGRAM_TOKEN');
-}
-
-const bot = new TelegramBot(token, { polling: true });
-
-bot.onText(/\/start/, async (msg) => {
+bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  await bot.sendMessage(
+  bot.sendMessage(
     chatId,
 `Get ready for Joker’s latest innovation — AI Power Ups Feature! 🤖✨
 
@@ -46,46 +36,14 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             {
               text: "🎰 AI Games",
               url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
+            },
+            {
+              text: "🌐 Community",
+              url: "https://www.facebook.com/jokermarketingg/"
             }
           ]
         ]
       }
     }
   );
-
-  await bot.sendMessage(chatId, "More:", {
-    reply_markup: {
-      keyboard: [
-        [{ text: "🌐 Community" }]
-      ],
-      resize_keyboard: true,
-      is_persistent: true
-    }
-  });
 });
-
-bot.on('message', async (msg) => {
-  const chatId = msg.chat.id;
-  const text = msg.text;
-
-  if (text === "🌐 Community") {
-    await bot.sendMessage(
-      chatId,
-`🌐 Follow Joker Marketing:
-
-Facebook:
-https://www.facebook.com/jokermarketingg/
-
-Instagram:
-https://www.instagram.com/jokermarketing.official/
-
-LinkedIn:
-https://www.linkedin.com/company/jokerjoker/
-
-YouTube:
-https://www.youtube.com/@Joker_Marketing_`
-    );
-  }
-});
-
-console.log("Bot is running...");
