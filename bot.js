@@ -44,7 +44,7 @@ bot.on('message', (msg) => {
   if (text === "🎮 Play Test") {
     bot.sendMessage(
       chatId,
-      "🎮 Play the test game on Joker Official:\nhttps://jokerofficial.net/en"
+      "🎮 Play AI Games on Joker Official:\nhttps://jokerofficial.net/game/allgames?filterby=2&orderby=1"
     );
   } 
   else if (text === "🚀 Campaign") {
