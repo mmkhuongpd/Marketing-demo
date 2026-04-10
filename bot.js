@@ -8,6 +8,7 @@ if (!token) {
 
 const bot = new TelegramBot(token, { polling: true });
 
+// START
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(
     msg.chat.id,
@@ -35,6 +36,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
   );
 });
 
+// HANDLE BUTTONS
 bot.on('message', (msg) => {
   const text = msg.text;
   const chatId = msg.chat.id;
@@ -42,35 +44,37 @@ bot.on('message', (msg) => {
   if (text === "🎮 Play Test") {
     bot.sendMessage(
       chatId,
-      "🎮 Play the test game here:\nhttps://your-joker-link.com"
+      "🎮 Play the test game on Joker Official:\nhttps://jokerofficial.net/en"
     );
-  } else if (text === "🚀 Campaign") {
+  } 
+  else if (text === "🚀 Campaign") {
     bot.sendMessage(
       chatId,
-      "🚀 Explore the campaign page here:\nhttps://your-landing-page.com"
+      "🚀 Explore AI Power Ups Campaign:\nhttps://ai-power-ups.web.app/"
     );
-  } else if (text === "🤖 AI Features") {
+  } 
+  else if (text === "🤖 AI Features") {
     bot.sendMessage(
       chatId,
-`🤖 Types Of AI Power Ups Feature
+`🤖 AI Power Ups Feature Details:
 
-1. Smart Reel Order : Reels rearrange to deliver the highest possible payout
-2. Smart Wild Shift : Wild symbols move into the best paying positions
-3. Smart Symbols Rotation : Outer symbols rotate into the most rewarding positions`
+👉 https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view?utm_content=DAHGQlxPMks&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7f7143dccd`
     );
-  } else if (text === "🎰 AI Games") {
+  } 
+  else if (text === "🎰 AI Games") {
     bot.sendMessage(
       chatId,
-      `🎰 AI Games
+`🎰 AI Games:
 
-- Game 1
-- Game 2
-- Game 3`
+• Fortune Crown AI
+• Ancient Rome Deluxe AI
+• Cursed Deluxe AI`
     );
-  } else if (text === "💬 Support") {
+  } 
+  else if (text === "💬 Support") {
     bot.sendMessage(
       chatId,
-      "💬 Contact support here:\nhttps://t.me/your_support"
+      "💬 Visit support page:\nhttps://jokerofficial.net/en"
     );
   }
 });
