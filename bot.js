@@ -28,7 +28,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
         inline_keyboard: [
           [
             {
-              text: "🎮 Play Test",
+              text: "🎮 Play Now",
               url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
             }
           ],
