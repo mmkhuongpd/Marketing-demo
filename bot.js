@@ -11,7 +11,6 @@ const bot = new TelegramBot(token, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  // Message chính + inline button mở link trực tiếp
   bot.sendMessage(
     chatId,
 `Get ready for Joker’s latest innovation — AI Power Ups Feature! 🤖✨
@@ -32,56 +31,31 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
               text: "🎮 Play Test",
               url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
             }
+          ],
+          [
+            {
+              text: "🚀 Campaign",
+              url: "https://ai-power-ups.web.app/"
+            },
+            {
+              text: "🤖 AI Features",
+              url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view?utm_content=DAHGQlxPMks&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7f7143dccd"
+            }
+          ],
+          [
+            {
+              text: "🎰 AI Games",
+              url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
+            },
+            {
+              text: "💬 Support",
+              url: "https://jokerofficial.net/en"
+            }
           ]
         ]
       }
     }
   );
-
-  // Reply keyboard cho các nút còn lại
-  bot.sendMessage(chatId, "Explore more:", {
-    reply_markup: {
-      keyboard: [
-        [{ text: "🚀 Campaign" }, { text: "🤖 AI Features" }],
-        [{ text: "🎰 AI Games" }, { text: "💬 Support" }]
-      ],
-      resize_keyboard: true,
-      is_persistent: true
-    }
-  });
-});
-
-bot.on('message', (msg) => {
-  const text = msg.text;
-  const chatId = msg.chat.id;
-
-  if (text === "🚀 Campaign") {
-    bot.sendMessage(
-      chatId,
-      "🚀 Explore AI Power Ups Campaign:\nhttps://ai-power-ups.web.app/"
-    );
-  } else if (text === "🤖 AI Features") {
-    bot.sendMessage(
-      chatId,
-      `🤖 AI Power Ups Feature Details:
-
-https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view?utm_content=DAHGQlxPMks&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7f7143dccd`
-    );
-  } else if (text === "🎰 AI Games") {
-    bot.sendMessage(
-      chatId,
-      `🎰 AI Games:
-
-• Fortune Crown AI
-• Ancient Rome Deluxe AI
-• Cursed Deluxe AI`
-    );
-  } else if (text === "💬 Support") {
-    bot.sendMessage(
-      chatId,
-      "💬 Visit support page:\nhttps://jokerofficial.net/en"
-    );
-  }
 });
 
 console.log("Bot is running...");
