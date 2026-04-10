@@ -49,7 +49,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             },
             {
               text: "🌐 Community",
-              url: "https://www.facebook.com/jokermarketingg/"
+              callback_data: "community_links"
             }
           ]
         ]
@@ -57,3 +57,31 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
     }
   );
 });
+
+bot.on("callback_query", async (query) => {
+  const chatId = query.message.chat.id;
+  const data = query.data;
+
+  if (data === "community_links") {
+    await bot.answerCallbackQuery(query.id);
+
+    await bot.sendMessage(
+      chatId,
+`🌐 Follow Joker Marketing:
+
+Facebook:
+https://www.facebook.com/jokermarketingg/
+
+Instagram:
+https://www.instagram.com/jokermarketing.official/
+
+LinkedIn:
+https://www.linkedin.com/company/jokerjoker/
+
+YouTube:
+https://www.youtube.com/@Joker_Marketing_`
+    );
+  }
+});
+
+console.log("Bot is running...");
