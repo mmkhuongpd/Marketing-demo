@@ -1,3 +1,13 @@
+const TelegramBot = require('node-telegram-bot-api');
+
+const token = process.env.TELEGRAM_TOKEN;
+
+if (!token) {
+  throw new Error('Missing TELEGRAM_TOKEN');
+}
+
+const bot = new TelegramBot(token, { polling: true });
+
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
