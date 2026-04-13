@@ -11,9 +11,11 @@ const bot = new TelegramBot(token, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(
+  bot.sendPhoto(
     chatId,
-`Get ready for Joker’s latest innovation — AI Power Ups Feature! 🤖✨
+    "https://res.cloudinary.com/dvdq79xh8/image/upload/f_auto,q_auto/AI_hxlkw2", 
+    {
+      caption: `Get ready for Joker’s latest innovation — AI Power Ups Feature! 🤖✨
 
 Turn every spin into a smarter, high-reward experience as AI enhancements optimize your gameplay for the highest possible payouts! 💸 With powerful smart boosts pushing your winning potential to the max, the thrill never stops. Stay tuned for 16 April 2026! 🔥
 
@@ -23,7 +25,6 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
 3. Smart Symbols Rotation: Outer symbols rotate into the most rewarding positions
 
 #aipowerups #aifeature #gaming #mobilegaming #smartgaming`,
-    {
       reply_markup: {
         inline_keyboard: [
           [
