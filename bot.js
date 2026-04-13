@@ -78,6 +78,9 @@ https://www.instagram.com/jokermarketing.official/
 LinkedIn:
 https://www.linkedin.com/company/jokerjoker/
 
+Twitter:
+https://x.com/_JokerMarketing
+
 YouTube:
 https://www.youtube.com/@Joker_Marketing_`
     );
