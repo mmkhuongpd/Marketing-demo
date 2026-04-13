@@ -39,7 +39,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             },
             {
               text: "🤖 AI Features",
-              url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view?utm_content=DAHGQlxPMks&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7f7143dccd"
+              url: "https://canva.link/o9wxhug07yphrt2"
             }
           ],
           [
