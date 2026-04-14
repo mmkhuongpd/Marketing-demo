@@ -27,12 +27,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
 #aipowerups #aifeature #gaming #mobilegaming #smartgaming`,
       reply_markup: {
         inline_keyboard: [
-          [
-            {
-              text: "🎮 Play Now",
-              url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
-            }
-          ],
+
           [
             {
               text: "✨ Explore",
@@ -44,10 +39,6 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             }
           ],
           [
-            {
-              text: "🎰 AI Games",
-              url: "https://jokerofficial.net/game/allgames?filterby=2&orderby=1"
-            },
             {
               text: "🌐 Community",
               callback_data: "community_links"
