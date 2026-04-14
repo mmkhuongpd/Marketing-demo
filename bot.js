@@ -24,6 +24,8 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
 2. Smart Wild Shift: Wild symbols move into the best paying positions
 3. Smart Symbols Rotation: Outer symbols rotate into the most rewarding positions
 
+💥 Unlock the power of AI gaming today! Click here to get started: https://jokergamingai.com/telebot
+
 #aipowerups #aifeature #gaming #mobilegaming #smartgaming`,
       reply_markup: {
         inline_keyboard: [
