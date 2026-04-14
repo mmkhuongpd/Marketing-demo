@@ -8,66 +8,71 @@ if (!token) {
 
 const bot = new TelegramBot(token, { polling: true });
 
-bot.onText(/\/start/, (msg) => {
+bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendPhoto(
-    chatId,
-    "https://res.cloudinary.com/dvdq79xh8/image/upload/f_auto,q_auto/AI_hxlkw2", 
-    {
-      caption: `Get ready for Joker’s latest innovation — AI Power Ups Feature! 🤖✨
+  try {
+    await bot.sendMessage(
+      chatId,
+      `🔥 Joker AI Power Ups is coming!
 
-Turn every spin into a smarter, high-reward experience as AI enhancements optimize your gameplay for the highest possible payouts! 💸 With powerful smart boosts pushing your winning potential to the max, the thrill never stops. Stay tuned for 16 April 2026! 🔥
+Turn every spin into a smarter, high-reward experience with AI enhancements optimizing your gameplay for maximum payouts. 💸
 
-🤖 Types Of AI Power Ups Feature
-1. Smart Reel Order: Reels rearrange to deliver the highest possible payout
-2. Smart Wild Shift: Wild symbols move into the best paying positions
-3. Smart Symbols Rotation: Outer symbols rotate into the most rewarding positions
+🤖 Features:
+• Smart Reel Order  
+• Smart Wild Shift  
+• Smart Symbols Rotation  
 
-💥 Unlock the power of AI gaming today! Click here to get started: https://jokergamingai.com/telebot
+🚀 Try it now:
+https://jokergamingai.com/telebot
 
-#aipowerups #aifeature #gaming #mobilegaming #smartgaming`,
-      reply_markup: {
-        inline_keyboard: [
-
-          [
-            {
-              text: "✨ Explore",
-              url: "https://jokergamingai.com/telebot"
-            }
-          ],
-          [
-            {
-              text: "🔥 Join Telegram Group for Early Updates",
-              url: "https://t.me/jokermarketingofficial"
-            }
-          ],
-          [
-             {
-              text: "🤖 AI Features",
-              url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view"
-            },
-            {
-              text: "🌐 Community",
-              callback_data: "community_links"
-            }
+#aipowerups #aifeature #gaming #smartgaming`,
+      {
+        disable_web_page_preview: false,
+        reply_markup: {
+          inline_keyboard: [
+            [
+              {
+                text: '✨ Explore',
+                url: 'https://jokergamingai.com/telebot'
+              }
+            ],
+            [
+              {
+                text: '🔥 Join Telegram for Early Updates',
+                url: 'https://t.me/jokermarketingofficial'
+              }
+            ],
+            [
+              {
+                text: '🤖 AI Features',
+                url: 'https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view'
+              },
+              {
+                text: '🌐 Community',
+                callback_data: 'community_links'
+              }
+            ]
           ]
-        ]
+        }
       }
-    }
-  );
+    );
+  } catch (error) {
+    console.error('Error sending message:', error);
+  }
 });
 
-bot.on("callback_query", async (query) => {
+bot.on('callback_query', async (query) => {
   const chatId = query.message.chat.id;
   const data = query.data;
 
-  if (data === "community_links") {
-    await bot.answerCallbackQuery(query.id);
+  try {
+    if (data === 'community_links') {
+      await bot.answerCallbackQuery(query.id);
 
-    await bot.sendMessage(
-      chatId,
-`🌐 Follow Joker Marketing:
+      await bot.sendMessage(
+        chatId,
+        `🌐 Follow Joker Marketing:
 
 Facebook:
 https://www.facebook.com/jokermarketingg/
@@ -83,8 +88,11 @@ https://x.com/_JokerMarketing
 
 YouTube:
 https://www.youtube.com/@Joker_Marketing_`
-    );
+      );
+    }
+  } catch (error) {
+    console.error('Error handling callback:', error);
   }
 });
 
-console.log("Bot is running...");
+console.log('Bot is running...');
