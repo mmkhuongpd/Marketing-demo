@@ -35,6 +35,12 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             }
           ],
           [
+            {
+              text: "🔥 Join Telegram for Early Updates",
+              url: "https://t.me/jokermarketingofficial"
+            }
+          ],
+          [
              {
               text: "🤖 AI Features",
               url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view"
