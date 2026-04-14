@@ -32,13 +32,13 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
             {
               text: "✨ Explore",
               url: "https://jokergamingai.com/"
-            },
-            {
-              text: "🤖 AI Features",
-              url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view"
             }
           ],
           [
+             {
+              text: "🤖 AI Features",
+              url: "https://www.canva.com/design/DAHGQlxPMks/ULsYi9QC9XV2Zmk9XCMUNg/view"
+            },
             {
               text: "🌐 Community",
               callback_data: "community_links"
