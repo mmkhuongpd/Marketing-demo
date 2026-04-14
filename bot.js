@@ -31,7 +31,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
           [
             {
               text: "✨ Explore",
-              url: "https://jokergamingai.com/"
+              url: "https://jokergamingai.com/telebot"
             }
           ],
           [
