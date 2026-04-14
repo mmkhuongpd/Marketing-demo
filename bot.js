@@ -38,7 +38,7 @@ Turn every spin into a smarter, high-reward experience as AI enhancements optimi
           ],
           [
             {
-              text: "🔥 Join Telegram for Early Updates",
+              text: "🔥 Join Telegram Group for Early Updates",
               url: "https://t.me/jokermarketingofficial"
             }
           ],
