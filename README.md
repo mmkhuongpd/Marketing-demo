@@ -1,1 +1,1 @@
-# AI-Power-UPS
+# Marketing demo
